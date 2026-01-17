@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Retail-Cortex.io — Service Modules</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#070A16;
+      --bg2:#0B1026;
+      --card:rgba(10,14,32,.76);
+      --card2:rgba(12,18,42,.86);
+      --stroke:rgba(148,163,184,.22);
+      --stroke2:rgba(148,163,184,.34);
+      --text:#E8EEFF;
+      --muted:rgba(232,238,255,.70);
+      --muted2:rgba(232,238,255,.55);
+      --brandA:#22d3ee;
+      --brandB:#7c3aed;
+      --good:#22c55e;
+      --warn:#f59e0b;
+
+      --r16:16px;
+      --r20:20px;
+      --shadow:0 18px 55px rgba(0,0,0,.55);
+      --shadow2:0 26px 75px rgba(0,0,0,.70);
+
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(124,58,237,.35), transparent 55%),
+        radial-gradient(800px 520px at 85% 15%, rgba(34,211,238,.26), transparent 58%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      padding-bottom:120px;
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:auto;
+      padding:16px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(14px);
+      background:rgba(7,10,22,.6);
+      border-bottom:1px solid var(--stroke);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .brand-title{
+      font-family:Orbitron;
+      font-weight:800;
+      letter-spacing:.1em;
+      background:linear-gradient(90deg,var(--brandB),var(--brandA));
+      -webkit-background-clip:text;
+      color:transparent;
+      font-size:1rem;
+    }
+
+    .hero{
+      padding:22px 0;
+    }
+
+    .heroTitle{
+      font-family:Orbitron;
+      font-size:2.2rem;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    .heroDesc{
+      color:var(--muted);
+      max-width:600px;
+      line-height:1.6;
+    }
+
+    .section{
+      margin-top:30px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:14px;
+    }
+
+    .card{
+      border:1px solid var(--stroke);
+      border-radius:var(--r20);
+      background:var(--card);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .cardTop{
+      display:flex;
+      justify-content:space-between;
+      padding:14px;
+    }
+
+    .badge{
+      font-size:.75rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .cardBody{
+      padding:14px;
+    }
+
+    .cardTitle{
+      font-weight:900;
+      text-transform:uppercase;
+      margin-bottom:6px;
+    }
+
+    .cardDesc{
+      font-size:.9rem;
+      color:var(--muted);
+      line-height:1.5;
+      margin-bottom:12px;
+    }
+
+    .btn{
+      width:100%;
+      padding:12px;
+      border-radius:14px;
+      border:none;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .btnPrimary{
+      background:linear-gradient(90deg,var(--brandB),var(--brandA));
+      color:#061026;
+    }
+
+    .btnGhost{
+      background:transparent;
+      border:1px solid var(--stroke2);
+      color:var(--text);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-title">RETAIL-CORTEX.IO</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <h1 class="heroTitle">Service Modules<br>Retail Execution</h1>
+    <p class="heroDesc">
+      Pilih modul → isi langsung di web → checkout → bayar → upload bukti → konfirmasi → WhatsApp otomatis.
+    </p>
+  </section>
+
+  <section class="section container">
+    <h2>Cortex Service Modules</h2>
+
+    <div class="grid">
+
+      <!-- MEMBER -->
+      <div class="card">
+        <div class="cardTop">
+          <div class="badge">MEMBERSHIP</div>
+        </div>
+        <div class="cardBody">
+          <div class="cardTitle">NEW MEMBER FRESH</div>
+          <p class="cardDesc">
+            Harga otomatis.<br>
+            ≥10 pcs Rp4.500 / pcs<br>
+            &lt;10 pcs Rp5.000 / pcs
+          </p>
+          <button class="btn btnPrimary" data-open="member">
+            DETAIL & INPUT
+          </button>
+        </div>
+      </div>
+
+      <!-- AREA -->
+      <div class="card">
+        <div class="cardTop">
+          <div class="badge">DESIGN</div>
+        </div>
+        <div class="cardBody">
+          <div class="cardTitle">DESIGN AREA COVERAGE</div>
+          <p class="cardDesc">
+            Harga fix Rp45.000<br>
+            Revisi gratis 1×24 jam
+          </p>
+          <button class="btn btnPrimary" data-open="area">
+            DETAIL & INPUT
+          </button>
+        </div>
+      </div>
+      <!-- PPS -->
+      <div class="card">
+        <div class="cardTop">
+          <div class="badge">COACHING</div>
+        </div>
+        <div class="cardBody">
+          <div class="cardTitle">MODUL RAHASIA TOP 10 PPS</div>
+          <p class="cardDesc">Harga fix (di pembayaran). Tambah ke keranjang.</p>
+          <button class="btn btnGhost" data-add-fixed="PPS" data-title="MODUL RAHASIA TOP 10 PPS">TAMBAH</button>
+        </div>
+      </div>
+
+      <!-- SUEG -->
+      <div class="card">
+        <div class="cardTop">
+          <div class="badge">COACHING</div>
+        </div>
+        <div class="cardBody">
+          <div class="cardTitle">MODUL RAHASIA TOP 10 SUEGEEERRR</div>
+          <p class="cardDesc">Harga fix (di pembayaran). Tambah ke keranjang.</p>
+          <button class="btn btnGhost" data-add-fixed="SUEG" data-title="MODUL RAHASIA TOP 10 SUEGEEERRR">TAMBAH</button>
+        </div>
+      </div>
+
+      <!-- PPT -->
+      <div class="card">
+        <div class="cardTop">
+          <div class="badge">PRESENTASI</div>
+        </div>
+        <div class="cardBody">
+          <div class="cardTitle">BIKIN PPT</div>
+          <p class="cardDesc">Harga konsultasi / konfirmasi admin.</p>
+          <button class="btn btnGhost" data-add-simple="BIKIN PPT">TAMBAH</button>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </section>
+
+  <footer class="container" style="margin-top:28px;border-top:1px solid var(--stroke);padding-top:16px;color:var(--muted2)">
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.9rem;">
+      <div>© <span id="y">2026</span> Retail-Cortex.io</div>
+      <div>Crafted with ❤ • D&amp;D A Digital Creative Studio</div>
+    </div>
+  </footer>
+</main>
+
+<!-- Floating Cart -->
+<button id="cartBtn" style="
+  position:fixed;right:16px;bottom:16px;z-index:40;
+  width:56px;height:56px;border-radius:999px;
+  border:1px solid var(--stroke2);background:rgba(255,255,255,.08);
+  color:var(--text);box-shadow:var(--shadow2);cursor:pointer;">
+  🛒
+  <span id="cartCount" style="
+    position:absolute;top:-6px;right:-6px;
+    min-width:22px;height:22px;border-radius:999px;
+    background:var(--good);color:#06200f;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:.75rem;border:2px solid rgba(0,0,0,.2);">0</span>
+</button>
+
+<!-- Drawer Cart -->
+<div id="drawerOverlay" style="display:none;position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);padding:12px;">
+  <div style="position:absolute;right:12px;bottom:12px;width:min(520px,calc(100% - 24px));
+    background:var(--card2);border:1px solid var(--stroke2);border-radius:22px;box-shadow:var(--shadow2);overflow:hidden;">
+    <div style="padding:14px;background:linear-gradient(90deg, rgba(124,58,237,.35), rgba(34,211,238,.22));
+      display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <div style="font-family:Orbitron;font-weight:800;letter-spacing:.06em;text-transform:uppercase;">Keranjang</div>
+      <button id="closeCart" class="btn btnGhost" style="width:auto;padding:8px 12px;border-radius:14px;">Tutup</button>
+    </div>
+
+    <div id="cartItems" style="padding:14px;max-height:56vh;overflow:auto;">
+      <p style="margin:0;color:var(--muted)">Keranjang masih kosong.</p>
+    </div>
+
+    <div style="padding:14px;border-top:1px solid var(--stroke);display:grid;gap:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;
+        padding:12px;border:1px solid var(--stroke);border-radius:18px;background:rgba(255,255,255,.05);font-weight:900;">
+        <span>Total</span>
+        <span id="cartTotal" style="color:var(--good)">Rp0</span>
+      </div>
+      <button id="clearCart" class="btn btnGhost">Hapus Keranjang</button>
+      <button id="checkoutBtn" class="btn btnPrimary">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: MEMBER ============ -->
+<div id="memberOverlay" style="display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);padding:12px;">
+  <div style="max-width:720px;margin:auto;background:var(--card2);border:1px solid var(--stroke2);
+    border-radius:22px;box-shadow:var(--shadow2);overflow:hidden;">
+    <div style="padding:14px;background:linear-gradient(90deg, rgba(124,58,237,.35), rgba(34,211,238,.22));
+      display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <div style="font-family:Orbitron;font-weight:800;letter-spacing:.06em;text-transform:uppercase;">NEW MEMBER FRESH</div>
+      <button class="btn btnGhost" data-close="member" style="width:auto;padding:8px 12px;border-radius:14px;">Tutup</button>
+    </div>
+
+    <div style="padding:14px;">
+      <p style="margin-top:0;color:var(--muted);line-height:1.6">
+        Isi data. Harga otomatis: <b>&ge;10 pcs</b> Rp4.500/pcs, <b>&lt;10 pcs</b> Rp5.000/pcs.
+      </p>
+
+      <div style="display:grid;gap:8px;margin-bottom:12px;">
+        <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Jumlah member (pcs)</div>
+        <input type="number" id="m_qty" min="1" step="1" placeholder="Contoh: 12" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="display:grid;gap:8px;margin-bottom:12px;">
+          <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Kode toko</div>
+          <input type="text" id="m_kodetoko" placeholder="Contoh: 2G44" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+        </div>
+        <div style="display:grid;gap:8px;margin-bottom:12px;">
+          <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">PIN / Tgl Lahir</div>
+          <input type="text" id="m_pin" placeholder="Contoh: 010203" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+        </div>
+      </div>
+
+      <div style="display:grid;gap:8px;margin-bottom:12px;">
+        <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Preview Ringkasan</div>
+        <textarea id="m_preview" readonly style="min-height:140px;resize:vertical;padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:700"></textarea>
+      </div>
+    </div>
+
+    <div style="padding:14px;border-top:1px solid var(--stroke);display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
+      <button class="btn btnGhost" data-close="member" style="width:auto;">Batal</button>
+      <button class="btn btnPrimary" id="m_addCart" style="width:auto;">Tambah ke Keranjang</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: AREA ============ -->
+<div id="areaOverlay" style="display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);padding:12px;">
+  <div style="max-width:720px;margin:auto;background:var(--card2);border:1px solid var(--stroke2);
+    border-radius:22px;box-shadow:var(--shadow2);overflow:hidden;">
+    <div style="padding:14px;background:linear-gradient(90deg, rgba(124,58,237,.35), rgba(34,211,238,.22));
+      display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <div style="font-family:Orbitron;font-weight:800;letter-spacing:.06em;text-transform:uppercase;">DESIGN AREA COVERAGE</div>
+      <button class="btn btnGhost" data-close="area" style="width:auto;padding:8px 12px;border-radius:14px;">Tutup</button>
+    </div>
+
+    <div style="padding:14px;">
+      <p style="margin-top:0;color:var(--muted);line-height:1.6">
+        Harga fix <b>Rp45.000</b> • Revisi gratis <b>1×24 jam</b>. Isi brief singkat.
+      </p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="display:grid;gap:8px;margin-bottom:12px;">
+          <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Nama toko</div>
+          <input type="text" id="a_namatoko" placeholder="Contoh: Alfamart KP Garung Tambak" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+        </div>
+        <div style="display:grid;gap:8px;margin-bottom:12px;">
+          <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Kode toko</div>
+          <input type="text" id="a_kodetoko" placeholder="Contoh: 2G44" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="display:grid;gap:8px;margin-bottom:12px;">
+          <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Berapa sub</div>
+          <input type="text" id="a_sub" placeholder="Contoh: 5 sub" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+        </div>
+        <div style="display:grid;gap:8px;margin-bottom:12px;">
+          <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Format</div>
+          <select id="a_format" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+            <option value="">Pilih format</option>
+            <option value="Landscape">Landscape</option>
+            <option value="Portrait">Portrait</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:8px;margin-bottom:12px;">
+        <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Sharelok toko</div>
+        <input type="text" id="a_sharelok" placeholder="Tempel link share location Google Maps" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+      </div>
+
+      <div style="display:grid;gap:8px;margin-bottom:12px;">
+        <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Preview Ringkasan</div>
+        <textarea id="a_preview" readonly style="min-height:160px;resize:vertical;padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:700"></textarea>
+      </div>
+    </div>
+
+    <div style="padding:14px;border-top:1px solid var(--stroke);display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
+      <button class="btn btnGhost" data-close="area" style="width:auto;">Batal</button>
+      <button class="btn btnPrimary" id="a_addCart" style="width:auto;">Tambah ke Keranjang</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: PAYMENT ============ -->
+<div id="payOverlay" style="display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);padding:12px;">
+  <div style="max-width:720px;margin:auto;background:var(--card2);border:1px solid var(--stroke2);
+    border-radius:22px;box-shadow:var(--shadow2);overflow:hidden;">
+    <div style="padding:14px;background:linear-gradient(90deg, rgba(124,58,237,.35), rgba(34,211,238,.22));
+      display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <div style="font-family:Orbitron;font-weight:800;letter-spacing:.06em;text-transform:uppercase;">Pembayaran</div>
+      <button class="btn btnGhost" data-close="pay" style="width:auto;padding:8px 12px;border-radius:14px;">Tutup</button>
+    </div>
+
+    <div style="padding:14px;">
+      <p style="margin-top:0;color:var(--muted);line-height:1.6">
+        Pilih metode, isi <b>Nama Pemesan</b>, upload bukti pembayaran. Setelah upload, tombol <b>KONFIRMASI PEMBAYARAN</b> aktif dan langsung ke WhatsApp auto-teks.
+      </p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+        <button class="btn btnGhost" id="payChooseQR">PILIH QRIS</button>
+        <button class="btn btnGhost" id="payChooseTF">PILIH TRANSFER</button>
+      </div>
+
+      <div style="display:grid;gap:8px;margin-bottom:12px;">
+        <div style="font-weight:900;color:var(--muted);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;">Nama Pemesan (WAJIB)</div>
+        <input type="text" id="payBuyerName" placeholder="Tulis nama pemesan" style="padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:800">
+      </div>
+
+      <div id="payCardWrap" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div id="payQRCard" style="display:none;border:1px solid var(--stroke);background:rgba(255,255,255,.05);border-radius:18px;padding:12px;">
+          <div style="font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;">QRIS</div>
+          <img src="qris.png" alt="QRIS" style="width:min(260px,82%);display:block;margin:10px auto 0;border-radius:16px;border:1px solid var(--stroke);background:rgba(255,255,255,.04);padding:8px"
+               onerror="this.style.display='none'">
+          <div style="margin-top:8px;color:var(--muted2);font-size:.9rem;line-height:1.5;">Scan QRIS untuk pembayaran.</div>
+        </div>
+
+        <div id="payTFCard" style="display:none;border:1px solid var(--stroke);background:rgba(255,255,255,.05);border-radius:18px;padding:12px;">
+          <div style="font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;">TRANSFER / E-WALLET</div>
+          <div style="margin-top:10px;color:var(--muted);line-height:1.55;">
+            <div style="font-weight:900;text-transform:uppercase;letter-spacing:.06em;">ATM</div>
+            <div>● ALADIN : 50418072326</div>
+            <div>● BCA : 5505059198</div>
+            <div>● SEABANK : 901245439994</div>
+            <div>● SUPERBANK : 000075561431</div>
+            <div style="margin-top:6px;color:var(--muted2);">A/n BRANDO</div>
+            <div style="height:1px;background:var(--stroke);margin:10px 0;"></div>
+            <div style="font-weight:900;text-transform:uppercase;letter-spacing:.06em;">EWALLET</div>
+            <div>● SHOPEE : 081717872185 (Brando26)</div>
+            <div>● DANA : 085182197994 (WAJIB +100)</div>
+            <div>● GOPAY : 081717872185</div>
+            <div>● OVO : 081717872185</div>
+            <div style="margin-top:6px;color:var(--muted2);">A/n BRANDO</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;border:1px solid var(--stroke);background:rgba(255,255,255,.05);border-radius:18px;padding:12px;">
+        <div style="font-weight:900;text-transform:uppercase;letter-spacing:.06em;">Upload Bukti Pembayaran</div>
+        <p style="margin:8px 0 0;color:var(--muted);line-height:1.55">
+          Upload langsung di sini (tanpa form). Setelah file dipilih, status berubah jadi <b>SUDAH UPLOAD</b>.
+        </p>
+        <div style="margin-top:10px;display:grid;gap:10px;">
+          <input type="file" id="payProofFile" accept="image/*" style="padding:10px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:700">
+          <div style="color:var(--muted2);font-size:.9rem;">Status: <b id="uploadStateLabel" style="color:var(--warn)">BELUM UPLOAD</b></div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;border:1px solid var(--stroke);background:rgba(255,255,255,.05);border-radius:18px;padding:12px;">
+        <div style="font-weight:900;text-transform:uppercase;letter-spacing:.06em;">Preview WA (Auto)</div>
+        <textarea id="waPreview" readonly style="min-height:170px;resize:vertical;padding:12px;border-radius:16px;border:1px solid var(--stroke2);background:rgba(255,255,255,.06);color:var(--text);font-weight:700;margin-top:10px"></textarea>
+      </div>
+    </div>
+
+    <div style="padding:14px;border-top:1px solid var(--stroke);display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
+      <button class="btn btnGhost" data-close="pay" style="width:auto;">Batal</button>
+      <button class="btn btnPrimary" id="payConfirm" style="width:auto;opacity:.55;pointer-events:none;">KONFIRMASI PEMBAYARAN</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT START (logic ada di BAGIAN 3) -->
+<script>
+  // =========================
+  // ====== CONFIG ===========
+  // =========================
+
+  // WA tujuan
+  const WA_NUMBER = "6287809236556";
+
+  // API Apps Script lu (berbasis spreadsheet)
+  // Contoh endpoint data produk: /exec?path=products&token=TOKEN
+  const API_BASE = "https://script.google.com/macros/s/AKfycbxTatHp9S2qoTlqCnoAJOIAzUx0Os20e9c0XnH7x2JZElyuZOGjWn1QhjgCuoBurcok/exec";
+  const API_TOKEN = "TOKEN_RAHASIA_BRANDON_123";
+
+  // Pricing lokal (fallback). Nanti bisa juga tarik dari spreadsheet pricing.
+  const PRICE_AREA = 45000;
+  const PRICE_PPS  = 100000;
+  const PRICE_SUEG = 100000;
+
+  // Member pricing rule (locked)
+  function memberPricePer(qty){
+    return (qty >= 10) ? 4500 : 5000;
+  }
+
+  // =========================
+  // ====== DOM HOOKS =========
+  // =========================
+  const memberOverlay = document.getElementById("memberOverlay");
+  const areaOverlay   = document.getElementById("areaOverlay");
+  const payOverlay    = document.getElementById("payOverlay");
+
+  const cartBtn = document.getElementById("cartBtn");
+  const drawerOverlay = document.getElementById("drawerOverlay");
+  const closeCart = document.getElementById("closeCart");
+  const clearCart = document.getElementById("clearCart");
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const cartCount = document.getElementById("cartCount");
+
+  const m_qty = document.getElementById("m_qty");
+  const m_kodetoko = document.getElementById("m_kodetoko");
+  const m_pin = document.getElementById("m_pin");
+  const m_preview = document.getElementById("m_preview");
+  const m_addCart = document.getElementById("m_addCart");
+
+  const a_namatoko = document.getElementById("a_namatoko");
+  const a_kodetoko = document.getElementById("a_kodetoko");
+  const a_sub = document.getElementById("a_sub");
+  const a_format = document.getElementById("a_format");
+  const a_sharelok = document.getElementById("a_sharelok");
+  const a_preview = document.getElementById("a_preview");
+  const a_addCart = document.getElementById("a_addCart");
+
+  const payChooseQR = document.getElementById("payChooseQR");
+  const payChooseTF = document.getElementById("payChooseTF");
+  const payQRCard   = document.getElementById("payQRCard");
+  const payTFCard   = document.getElementById("payTFCard");
+  const payBuyerName = document.getElementById("payBuyerName");
+  const payProofFile = document.getElementById("payProofFile");
+  const uploadStateLabel = document.getElementById("uploadStateLabel");
+  const waPreview = document.getElementById("waPreview");
+  const payConfirm = document.getElementById("payConfirm");
+
+  // lanjut logic lengkap ada di BAGIAN 3
+<script>
+/* =========================================================
+   RETAIL-CORTEX — PART 3 (FIX FINAL)
+   - No Google Form
+   - Upload bukti di web
+   - Konfirmasi aktif hanya jika: metode + nama + bukti
+   - Klik konfirmasi -> POST ke Apps Script (Spreadsheet) -> Auto WA text
+   ========================================================= */
+
+/* =========================
+   ====== CONFIG ===========
+   ========================= */
+const WA_NUMBER = "6287809236556";
+
+// Apps Script Web App (punya lu)
+const API_BASE  = "https://script.google.com/macros/s/AKfycbxTatHp9S2qoTlqCnoAJOIAzUx0Os20e9c0XnH7x2JZElyuZOGjWn1QhjgCuoBurcok/exec";
+
+// Token bebas (samain dengan Apps Script lu)
+const API_TOKEN = "TOKEN_RAHASIA_BRANDON_123";
+
+// Harga fix
+const PRICE_AREA = 45000;
+const PRICE_PPS  = 100000;
+const PRICE_SUEG = 100000;
+
+// Rule member (LOCKED)
+function memberPricePer(qty){ return (qty >= 10) ? 4500 : 5000; }
+
+/* =========================
+   ====== HELPERS ==========
+   ========================= */
+const money = (n) => "Rp" + (Number(n || 0)).toLocaleString("id-ID");
+const moneyUpperRpDot = (n) => "RP. " + (Number(n || 0)).toLocaleString("id-ID");
+
+function upper(s){ return String(s || "").trim().toUpperCase(); }
+function pad2(n){ return String(n).padStart(2,"0"); }
+function rand4(){ return Math.floor(1000 + Math.random() * 9000); }
+
+function makeOrderNo(){
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = pad2(d.getMonth()+1);
+  const day = pad2(d.getDate());
+  const hh = pad2(d.getHours());
+  const mm = pad2(d.getMinutes());
+  const ss = pad2(d.getSeconds());
+  return `RC-${y}${m}${day}-${hh}${mm}${ss}-${rand4()}`;
+}
+
+function clampInt(v, min=1){
+  const x = parseInt(v, 10);
+  if(Number.isNaN(x)) return min;
+  return Math.max(min, x);
+}
+
+async function fetchJson(url, opts={}){
+  const res = await fetch(url, opts);
+  const txt = await res.text().catch(()=> "");
+  try{
+    const j = JSON.parse(txt);
+    if(!res.ok) throw new Error(j?.error || `HTTP ${res.status}`);
+    return j;
+  }catch{
+    if(!res.ok) throw new Error(`HTTP ${res.status} - ${txt.slice(0,140)}`);
+    return { ok:false, raw:txt };
+  }
+}
+
+function fileToDataURL(file, maxMB = 2.5){
+  return new Promise((resolve, reject) => {
+    if(!file) return resolve("");
+    if(file.size > maxMB * 1024 * 1024){
+      return reject(new Error(`File terlalu besar. Maks ${maxMB}MB.`));
+    }
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result || ""));
+    r.onerror = () => reject(new Error("Gagal baca file."));
+    r.readAsDataURL(file);
+  });
+}
+
+/* =========================
+   ====== DOM HOOKS =========
+   ========================= */
+const memberOverlay = document.getElementById("memberOverlay");
+const areaOverlay   = document.getElementById("areaOverlay");
+const payOverlay    = document.getElementById("payOverlay");
+
+const drawerOverlay = document.getElementById("drawerOverlay");
+const cartBtn       = document.getElementById("cartBtn");
+const closeCart     = document.getElementById("closeCart");
+const clearCart     = document.getElementById("clearCart");
+const checkoutBtn   = document.getElementById("checkoutBtn");
+const cartItems     = document.getElementById("cartItems");
+const cartTotal     = document.getElementById("cartTotal");
+const cartCount     = document.getElementById("cartCount");
+
+const m_qty      = document.getElementById("m_qty");
+const m_kodetoko = document.getElementById("m_kodetoko");
+const m_pin      = document.getElementById("m_pin");
+const m_preview  = document.getElementById("m_preview");
+const m_addCart  = document.getElementById("m_addCart");
+
+const a_namatoko = document.getElementById("a_namatoko");
+const a_kodetoko = document.getElementById("a_kodetoko");
+const a_sub      = document.getElementById("a_sub");
+const a_sharelok = document.getElementById("a_sharelok");
+const a_format   = document.getElementById("a_format");
+const a_addCart  = document.getElementById("a_addCart");
+// a_preview optional (kalau gak ada, aman)
+const a_preview  = document.getElementById("a_preview");
+
+const payChooseQR     = document.getElementById("payChooseQR");
+const payChooseTF     = document.getElementById("payChooseTF");
+const payQRCard       = document.getElementById("payQRCard");
+const payTFCard       = document.getElementById("payTFCard");
+const payBuyerName    = document.getElementById("payBuyerName");
+const payProofFile    = document.getElementById("payProofFile");
+const uploadStateLabel= document.getElementById("uploadStateLabel");
+const waPreview       = document.getElementById("waPreview");
+const payConfirm      = document.getElementById("payConfirm");
+
+/* =========================
+   ====== OPEN/CLOSE =======
+   ========================= */
+function openOverlay(which){
+  if(which==="member") memberOverlay?.classList.add("open");
+  if(which==="area")   areaOverlay?.classList.add("open");
+  if(which==="pay")    payOverlay?.classList.add("open");
+}
+function closeOverlay(which){
+  if(which==="member") memberOverlay?.classList.remove("open");
+  if(which==="area")   areaOverlay?.classList.remove("open");
+  if(which==="pay")    payOverlay?.classList.remove("open");
+}
+
+// tombol data-open / data-close
+document.addEventListener("click", (e) => {
+  const o = e.target.closest("[data-open]");
+  if(o){ openOverlay(o.getAttribute("data-open")); return; }
+  const c = e.target.closest("[data-close]");
+  if(c){ closeOverlay(c.getAttribute("data-close")); return; }
+});
+
+// klik area luar modal
+[memberOverlay, areaOverlay, payOverlay].forEach(ov => {
+  if(!ov) return;
+  ov.addEventListener("click", (e) => { if(e.target === ov) ov.classList.remove("open"); });
+});
+
+/* =========================
+   ====== CART CORE ========
+   ========================= */
+const CART_KEY = "rc_cart_v5";
+
+function getCart(){
+  try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+  catch { return []; }
+}
+function setCart(items){
+  localStorage.setItem(CART_KEY, JSON.stringify(items));
+  renderCart();
+}
+
+function cartQtySum(items){
+  return items.reduce((a,b)=> a + (Number(b.qty)||1), 0);
+}
+
+function calcKnownTotal(cart){
+  return cart.reduce((sum, it) => {
+    const price = Number(it.price);
+    if(!Number.isFinite(price)) return sum;
+    return sum + price * (Number(it.qty)||1);
+  }, 0);
+}
+
+function addItem(item){
+  const cart = getCart();
+  const sig = item.sig || item.title;
+  const found = cart.find(x => x.sig === sig);
+  if(found) found.qty = (Number(found.qty)||1) + (Number(item.qty)||1);
+  else cart.push(item);
+  setCart(cart);
+  openCart();
+}
+
+function removeItem(sig){
+  setCart(getCart().filter(x => x.sig !== sig));
+}
+
+function changeQty(sig, delta){
+  const cart = getCart();
+  const it = cart.find(x => x.sig === sig);
+  if(!it) return;
+  it.qty = Math.max(1, (Number(it.qty)||1) + delta);
+  setCart(cart);
+}
+
+function openCart(){ drawerOverlay?.classList.add("open"); }
+function closeCartFn(){ drawerOverlay?.classList.remove("open"); }
+
+cartBtn?.addEventListener("click", openCart);
+closeCart?.addEventListener("click", closeCartFn);
+drawerOverlay?.addEventListener("click", (e) => { if(e.target === drawerOverlay) closeCartFn(); });
+clearCart?.addEventListener("click", () => setCart([]));
+
+function renderCart(){
+  const cart = getCart();
+  if(cartCount) cartCount.textContent = String(cartQtySum(cart));
+
+  if(!cartItems || !cartTotal) return;
+
+  if(cart.length === 0){
+    cartItems.innerHTML = `<p class="help" style="margin:0">Keranjang masih kosong.</p>`;
+    cartTotal.textContent = money(0);
+    return;
+  }
+
+  let total = 0;
+  cartItems.innerHTML = cart.map(it => {
+    const price = Number(it.price);
+    total += (Number.isFinite(price) ? price : 0) * (Number(it.qty)||1);
+
+    return `
+      <div class="item">
+        <div>
+          <div class="t">${upper(it.title)}</div>
+          <div class="m">${it.meta || ""}</div>
+          <div style="margin-top:6px;font-weight:1000;color:var(--good)">${money(price)}</div>
+        </div>
+        <div class="right">
+          <div class="qty">
+            <button class="qbtn" data-q="-1" data-sig="${encodeURIComponent(it.sig)}">-</button>
+            <span>${it.qty}</span>
+            <button class="qbtn" data-q="1" data-sig="${encodeURIComponent(it.sig)}">+</button>
+          </div>
+          <button class="rm" data-rm="${encodeURIComponent(it.sig)}">Hapus</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  cartTotal.textContent = money(total);
+}
+
+cartItems?.addEventListener("click", (e) => {
+  const q = e.target.closest("[data-q]");
+  if(q){
+    const sig = decodeURIComponent(q.getAttribute("data-sig"));
+    const d = Number(q.getAttribute("data-q"));
+    changeQty(sig, d);
+    return;
+  }
+  const rm = e.target.closest("[data-rm]");
+  if(rm){
+    const sig = decodeURIComponent(rm.getAttribute("data-rm"));
+    removeItem(sig);
+  }
+});
+
+/* =========================
+   ====== ADD BUTTONS ======
+   ========================= */
+// fixed (PPS / SUEG)
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-add-fixed]");
+  if(!b) return;
+  const code  = b.getAttribute("data-add-fixed");
+  const title = upper(b.getAttribute("data-title") || "");
+
+  let price = 0;
+  if(code === "PPS") price = PRICE_PPS;
+  if(code === "SUEG") price = PRICE_SUEG;
+
+  addItem({
+    type:"fixed",
+    title,
+    qty:1,
+    price,
+    meta:`Harga fix: ${money(price)}`,
+    sig:`fixed::${code}`
+  });
+});
+
+// simple (konsultasi)
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-add-simple]");
+  if(!b) return;
+  const title = upper(b.getAttribute("data-add-simple") || "");
+  addItem({
+    type:"simple",
+    title,
+    qty:1,
+    price:0,
+    meta:"Harga konsultasi / konfirmasi admin.",
+    sig:`simple::${title}`
+  });
+});
+
+/* =========================
+   ===== MEMBER LOGIC ======
+   ========================= */
+function renderMemberPreview(){
+  if(!m_preview) return;
+  const qty  = clampInt(m_qty?.value || 1, 1);
+  const kode = upper(m_kodetoko?.value || "-");
+  const pin  = upper(m_pin?.value || "-");
+
+  const per   = memberPricePer(qty);
+  const total = per * qty;
+
+  m_preview.value =
+`#AKTIVASI#${kode}
+PIN / Tgl Lahir : ${pin}
+Jumlah Member : ${qty} pcs
+Harga / pcs : ${money(per)}
+TOTAL PEMBAYARAN : ${moneyUpperRpDot(total)}`;
+}
+
+[m_qty, m_kodetoko, m_pin].forEach(el => el?.addEventListener("input", renderMemberPreview));
+renderMemberPreview();
+
+m_addCart?.addEventListener("click", () => {
+  const qty  = clampInt(m_qty?.value || 1, 1);
+  const kode = upper(m_kodetoko?.value || "");
+  const pin  = upper(m_pin?.value || "");
+
+  const per   = memberPricePer(qty);
+  const total = per * qty;
+
+  const meta =
+`Aktivasi#${kode || "-"}<br>
+PIN / Tgl Lahir : ${pin || "-"}<br>
+Jumlah Member : ${qty} pcs<br>
+Harga / pcs : ${money(per)}`;
+
+  addItem({
+    type:"member",
+    title:"NEW MEMBER FRESH",
+    qty:1,
+    price: total,
+    meta,
+    sig:`member::${kode||"-"}::${pin||"-"}::${qty}`,
+    payload:{ kode, pin, qty, per, total }
+  });
+
+  closeOverlay("member");
+});
+
+/* =========================
+   ===== AREA LOGIC ========
+   ========================= */
+function renderAreaPreview(){
+  if(!a_preview) return; // optional
+  const nama = (a_namatoko?.value || "").trim();
+  const kode = upper(a_kodetoko?.value || "-");
+  const sub  = (a_sub?.value || "").trim();
+  const fmt  = (a_format?.value || "").trim();
+  const link = (a_sharelok?.value || "").trim();
+
+  a_preview.value =
+`DESIGN AREA COVERAGE
+Nama Toko : ${nama || "-"}
+Kode Toko : ${kode || "-"}
+Berapa Sub : ${sub || "-"}
+Format : ${fmt || "-"}
+Sharelok : ${link || "-"}
+TOTAL PEMBAYARAN : ${moneyUpperRpDot(PRICE_AREA)}`;
+}
+[a_namatoko, a_kodetoko, a_sub, a_format, a_sharelok].forEach(el => el?.addEventListener("input", renderAreaPreview));
+renderAreaPreview();
+
+a_addCart?.addEventListener("click", () => {
+  const nama = (a_namatoko?.value || "").trim();
+  const kode = upper(a_kodetoko?.value || "");
+  const sub  = (a_sub?.value || "").trim();
+  const fmt  = (a_format?.value || "").trim();
+  const link = (a_sharelok?.value || "").trim();
+
+  if(!fmt){
+    alert("Silakan pilih format dulu (Landscape / Portrait).");
+    return;
+  }
+
+  const meta =
+`Nama Toko : ${nama || "-"}<br>
+Kode Toko : ${kode || "-"}<br>
+Berapa Sub : ${sub || "-"}<br>
+Format : ${fmt}<br>
+Sharelok : ${link || "-"}`;
+
+  addItem({
+    type:"area",
+    title:"DESIGN AREA COVERAGE",
+    qty:1,
+    price: PRICE_AREA,
+    meta,
+    sig:`area::${kode||"-"}::${fmt||"-"}::${sub||"-"}::${nama||"-"}`,
+    payload:{ nama, kode, sub, fmt, link }
+  });
+
+  closeOverlay("area");
+});
+
+/* =========================
+   ===== PAYMENT FLOW ======
+   ========================= */
+let selectedPay = "";        // "QRIS" / "TRANSFER"
+let currentOrderNo = "";     // generated per checkout
+let proofDataUrl = "";       // base64
+let proofOk = false;         // gate
+
+function showPayCard(which){
+  if(which === "QRIS"){
+    payQRCard && (payQRCard.style.display = "block");
+    payTFCard && (payTFCard.style.display = "none");
+  }
+  if(which === "TRANSFER"){
+    payQRCard && (payQRCard.style.display = "none");
+    payTFCard && (payTFCard.style.display = "block");
+  }
+}
+
+function setConfirmEnabled(on){
+  if(!payConfirm) return;
+  if(on){
+    payConfirm.classList.remove("disabledBtn");
+  }else{
+    payConfirm.classList.add("disabledBtn");
+  }
+}
+
+function refreshConfirmState(){
+  const nameOk   = (payBuyerName?.value || "").trim().length > 0;
+  const methodOk = !!selectedPay;
+  const ok = nameOk && methodOk && proofOk;
+  setConfirmEnabled(ok);
+  updateWAPreview();
+}
+
+function resetPayState(){
+  selectedPay = "";
+  currentOrderNo = "";
+  proofDataUrl = "";
+  proofOk = false;
+
+  if(payBuyerName) payBuyerName.value = "";
+  if(payProofFile) payProofFile.value = "";
+
+  if(uploadStateLabel){
+    uploadStateLabel.textContent = "BELUM UPLOAD";
+    uploadStateLabel.style.color = "var(--warn)";
+  }
+
+  if(payQRCard) payQRCard.style.display = "none";
+  if(payTFCard) payTFCard.style.display = "none";
+
+  if(waPreview) waPreview.value = "";
+  setConfirmEnabled(false);
+}
+
+function buildWAConfirmText(){
+  const cart = getCart();
+  const buyer = upper(payBuyerName?.value || "");
+  const total = calcKnownTotal(cart);
+
+  let lines = [];
+  lines.push("KONFIRMASI PEMBAYARAN");
+  lines.push("");
+  lines.push(`Nomor Order : ${currentOrderNo || "-"}`);
+  lines.push(`Nama Pemesan : ${buyer || "-"}`);
+  lines.push("");
+  lines.push("RINGKASAN ORDER");
+
+  let i = 1;
+  cart.forEach(it => {
+    if(it.type === "member" && it.payload){
+      const p = it.payload;
+      lines.push(`${i}) NEW MEMBER FRESH`);
+      lines.push("");
+      lines.push(`Aktivasi#${p.kode || "-"}`);
+      lines.push(`PIN / Tgl Lahir : ${p.pin || "-"}`);
+      lines.push(`Jumlah Member : ${p.qty} pcs`);
+      lines.push("");
+      i++;
+      return;
+    }
+    if(it.type === "area" && it.payload){
+      const p = it.payload;
+      lines.push(`${i}) DESIGN AREA COVERAGE`);
+      lines.push("");
+      lines.push(`Nama Toko : ${p.nama || "-"}`);
+      lines.push(`Kode Toko : ${p.kode || "-"}`);
+      lines.push(`Berapa Sub : ${p.sub || "-"}`);
+      lines.push(`Format : ${p.fmt || "-"}`);
+      lines.push("");
+      i++;
+      return;
+    }
+    lines.push(`${i}) ${upper(it.title || "-")}`);
+    lines.push("");
+    i++;
+  });
+
+  lines.push(`TOTAL PEMBAYARAN : ${moneyUpperRpDot(total)}`);
+  lines.push(`Metode Pembayaran : ${upper(selectedPay || "-")}`);
+  lines.push("");
+  lines.push("Bukti pembayaran sudah di-upload melalui sistem.");
+  lines.push("Terima kasih.");
+
+  return lines.join("\n");
+}
+
+function updateWAPreview(){
+  if(!waPreview) return;
+  if(!currentOrderNo) { waPreview.value = ""; return; }
+  waPreview.value = buildWAConfirmText();
+}
+
+// pilih metode
+payChooseQR?.addEventListener("click", () => {
+  selectedPay = "QRIS";
+  showPayCard("QRIS");
+  refreshConfirmState();
+});
+payChooseTF?.addEventListener("click", () => {
+  selectedPay = "TRANSFER";
+  showPayCard("TRANSFER");
+  refreshConfirmState();
+});
+
+// nama wajib
+payBuyerName?.addEventListener("input", refreshConfirmState);
+
+// upload bukti -> base64
+payProofFile?.addEventListener("change", async () => {
+  const file = payProofFile.files && payProofFile.files[0];
+  if(!file){
+    proofOk = false;
+    proofDataUrl = "";
+    if(uploadStateLabel){
+      uploadStateLabel.textContent = "BELUM UPLOAD";
+      uploadStateLabel.style.color = "var(--warn)";
+    }
+    refreshConfirmState();
+    return;
+  }
+
+  try{
+    proofDataUrl = await fileToDataURL(file, 2.5);
+    proofOk = true;
+    if(uploadStateLabel){
+      uploadStateLabel.textContent = "SUDAH UPLOAD";
+      uploadStateLabel.style.color = "var(--good)";
+    }
+    refreshConfirmState();
+  }catch(err){
+    alert(err?.message || "Gagal upload bukti.");
+    payProofFile.value = "";
+    proofOk = false;
+    proofDataUrl = "";
+    if(uploadStateLabel){
+      uploadStateLabel.textContent = "BELUM UPLOAD";
+      uploadStateLabel.style.color = "var(--warn)";
+    }
+    refreshConfirmState();
+  }
+});
+
+/* =========================
+   ====== CHECKOUT =========
+   ========================= */
+checkoutBtn?.addEventListener("click", () => {
+  const cart = getCart();
+  if(cart.length === 0){
+    alert("Keranjang masih kosong.");
+    return;
+  }
+  closeCartFn();
+  resetPayState();
+  currentOrderNo = makeOrderNo();
+  openOverlay("pay");
+  updateWAPreview();
+});
+
+/* =========================
+   ====== POST TO SHEET =====
+   ========================= */
+async function postTransactionToSheet(){
+  const cart = getCart();
+  const buyerName = upper(payBuyerName?.value || "");
+  const totalRp = calcKnownTotal(cart);
+  const summary = buildWAConfirmText();
+
+  const items = cart.map(it => ({
+    type: it.type,
+    title: it.title,
+    qty: it.qty,
+    price: it.price,
+    payload: it.payload || null
+  }));
+
+  const payload = {
+    token: API_TOKEN,
+    action: "transaction",
+    data: {
+      orderNo: currentOrderNo,
+      buyerName,
+      payMethod: selectedPay,
+      totalRp,
+      summary,
+      itemsJson: JSON.stringify(items),
+      proofBase64: proofDataUrl,
+      createdAt: new Date().toISOString(),
+      status: "PAID - WAITING PROCESS"
+    }
+  };
+
+  const res = await fetchJson(API_BASE, {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(payload)
+  });
+
+  if(res?.ok !== true){
+    throw new Error(res?.error || "Gagal simpan ke Spreadsheet.");
+  }
+  return res;
+}
+
+/* =========================
+   ====== CONFIRM ==========
+   ========================= */
+payConfirm?.addEventListener("click", async () => {
+  if(payConfirm.classList.contains("disabledBtn")){
+    alert("Lengkapi dulu: pilih metode, isi nama, upload bukti.");
+    return;
+  }
+
+  // anti double click
+  setConfirmEnabled(false);
+
+  try{
+    await postTransactionToSheet();
+
+    // sukses -> langsung WA
+    const msg = buildWAConfirmText();
+    const waUrl = `https://wa.me/${encodeURIComponent(WA_NUMBER)}?text=${encodeURIComponent(msg)}`;
+    window.open(waUrl, "_blank");
+
+    closeOverlay("pay");
+    setCart([]);
+    resetPayState();
+
+  }catch(err){
+    alert("Gagal konfirmasi: " + (err?.message || err));
+    refreshConfirmState();
+  }
+});
+
+/* =========================
+   ====== INIT ============
+   ========================= */
+try{
+  const y = document.getElementById("y");
+  if(y) y.textContent = new Date().getFullYear();
+}catch{}
+
+renderCart();
+</script>
+</body>
+</html>
